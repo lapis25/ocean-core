@@ -22,7 +22,7 @@ sub on_room_info_request {
 sub on_room_list_request {
     my ($self, $ctx, $args) = @_;
     $ctx->post_job(
-        Ocean::Constants::EventType::ROOM_INFO_REQUEST,
+        Ocean::Constants::EventType::ROOM_LIST_REQUEST,
         {
             from => $args->from->as_string,
             id   => $args->id,
